@@ -866,6 +866,7 @@ section {
 
 /* Contact Section */
 .contact-section {
+  background: var(--color-background-color);
   max-width: 800px;
   margin: 0 auto;
 }

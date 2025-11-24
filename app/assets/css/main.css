@@ -12,6 +12,9 @@ body {
   user-select: none;
   transition: all 0.2s ease-in-out;
 }
+#__nuxt {
+  background-color: var(--color-background-color);
+}
 button,
 input,
 textarea,
