@@ -210,6 +210,54 @@
       </div>
     </section>
 
+    <!-- First Deploy Section -->
+    <section class="first-deploy-section">
+      <h2 class="section-title font-micro5-regular">
+        <span class="title-bracket">[</span> The First Deploy
+        <span class="title-bracket">]</span>
+      </h2>
+      <div class="first-deploy-content">
+        <div class="deploy-badge">
+          <span class="badge-icon">🌸</span>
+          <span class="badge-text">Est. 2021</span>
+        </div>
+        <p class="deploy-intro">
+          Every developer remembers their first website. Mine was a love letter
+          to the three things that defined me: <strong>web development</strong>
+          (which I was just learning), <strong>crocheting</strong> (1000+
+          projects strong), and <strong>good food</strong>. No frameworks, no
+          fancy animations—just pure HTML, CSS, JavaScript, and determination.
+        </p>
+        <div class="deploy-highlight">
+          <div class="highlight-icon">💫</div>
+          <div class="highlight-content">
+            <h3 class="highlight-title">From "Hello World" to Hello Universe</h3>
+            <p class="highlight-text">
+              That first deployment taught me the fundamentals. Now I build with
+              Vue, Nuxt, TypeScript, and all the fancy tools—but I'll never
+              forget where it started. The crochet passion? Still going strong.
+              The cooking skills? Still experimenting. The code? Well, let's
+              just say it's evolved a bit. 😄
+            </p>
+          </div>
+        </div>
+        <a
+          href="https://deevine.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="deploy-button"
+        >
+          <span class="button-icon">🚀</span>
+          <span>View My First Website</span>
+          <span class="button-arrow">→</span>
+        </a>
+        <p class="deploy-footnote">
+          Warning: You're about to witness the humble beginnings. Prepare for
+          nostalgia! 🎨
+        </p>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section">
       <h2 class="section-title font-micro5-regular">
@@ -807,6 +855,182 @@ section {
   margin: 0 auto;
 }
 
+/* First Deploy Section */
+.first-deploy-section {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(var(--color-primary-color-rgb), 0.03);
+  border-radius: 15px;
+  padding: 4rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.first-deploy-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--color-primary-color-rgb), 0.1) 0%,
+    transparent 70%
+  );
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.first-deploy-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.deploy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(var(--color-primary-color-rgb), 0.15);
+  border: 2px solid var(--color-primary-color);
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  margin-bottom: 2rem;
+  font-family: var(--font-micro5-regular);
+  color: var(--color-primary-color);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-icon {
+  font-size: 1.2rem;
+}
+
+.deploy-intro {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-color);
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.deploy-intro strong {
+  color: var(--color-primary-color);
+  font-weight: 600;
+}
+
+.deploy-highlight {
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--color-primary-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.deploy-highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(var(--color-primary-color-rgb), 0.3);
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px var(--color-primary-color));
+}
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-title {
+  font-family: var(--font-micro5-regular);
+  font-size: 1.4rem;
+  color: var(--color-primary-color);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--color-primary-color);
+}
+
+.highlight-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-color);
+  opacity: 0.9;
+  margin: 0;
+}
+
+.deploy-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2.5rem;
+  background: var(--color-primary-color);
+  color: var(--color-background-color);
+  border: 2px solid var(--color-primary-color);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-micro5-regular);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.deploy-button:hover {
+  background: transparent;
+  color: var(--color-primary-color);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 40px rgba(var(--color-primary-color-rgb), 0.5);
+}
+
+.button-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.deploy-button:hover .button-icon {
+  transform: rotate(15deg) scale(1.2);
+}
+
+.button-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.deploy-button:hover .button-arrow {
+  transform: translateX(8px);
+}
+
+.deploy-footnote {
+  font-size: 0.9rem;
+  color: var(--color-text-color);
+  opacity: 0.7;
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+}
+
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1058,6 +1282,39 @@ section {
   .social-link {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .first-deploy-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .deploy-intro {
+    font-size: 1rem;
+  }
+
+  .deploy-highlight {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .highlight-icon {
+    font-size: 2rem;
+  }
+
+  .highlight-title {
+    font-size: 1.2rem;
+  }
+
+  .highlight-text {
+    font-size: 0.95rem;
+  }
+
+  .deploy-button {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 
   .footer-content {
