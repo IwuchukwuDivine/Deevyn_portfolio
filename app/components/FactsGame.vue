@@ -172,7 +172,7 @@ const createAsteroid = (): Asteroid => {
 
   // Define safe zones (avoiding title at top, instructions at bottom, and side drawer on left)
   const minY = 120; // Below title
-  const maxY = containerRect.height - 100; // Above instructions
+  const maxY = containerRect.height - (isMobile ? 150 : 100); // Above instructions, more padding on mobile
   const minX = Math.max(padding, sideDrawerWidth); // Avoid side drawer
   const maxX = containerRect.width - asteroidSize - padding;
 
@@ -347,11 +347,9 @@ const smashPlanet = (
 };
 
 const checkAllPlanetsSmashed = () => {
-  // Wait for the fact reveal animation to complete before showing reset modal
-  // Fact reveal delay (600ms) + fact display duration (5800ms) = 6400ms total
   setTimeout(() => {
     allPlanetsSmashed.value = planets.value.every((planet) => planet.cracked);
-  }, 6500);
+  }, 15000);
 };
 
 const resetGame = () => {
@@ -477,7 +475,7 @@ const handleResize = () => {
   const sideDrawerWidth = isMobile ? 0 : window.innerWidth * 0.18 + 20; // 18vw + extra padding
 
   const minY = 120;
-  const maxY = containerRect.height - 100;
+  const maxY = containerRect.height - (isMobile ? 150 : 100); // More padding on mobile
   const minX = Math.max(padding, sideDrawerWidth); // Avoid side drawer
   const maxX = containerRect.width - asteroidSize - padding;
 
@@ -515,7 +513,7 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 90vh;
+  height: 90dvh;
   perspective: 1000px;
   background: var(--color-background-color);
   font-family: var(--font-micro5-regular);
@@ -722,11 +720,12 @@ onUnmounted(() => {
   pointer-events: none;
   animation: revealPop 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
   backdrop-filter: blur(10px);
+  font-family: var(--font-iceland-regular);
 }
 
 @media (max-width: 768px) {
   .fact-reveal {
-    font-size: 14px;
+    font-size: 16px;
     padding: 20px;
     max-width: 85%;
     min-width: auto;
@@ -971,7 +970,8 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .reset-card {
     padding: 25px 20px;
-    max-width: 90%;
+    width: 80vw;
+    max-width: 80vw;
     border: 2px solid var(--color-primary-color);
   }
 }

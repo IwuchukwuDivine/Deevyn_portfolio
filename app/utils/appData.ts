@@ -131,9 +131,9 @@ export const crochetImages = [
   "/hobby/IMG_9808.JPG",
 ];
 export const planetPositions = [
-  { top: "20%", left: "20%" },
-  { top: "30%", left: "70%" },
-  { top: "60%", left: "25%" },
-  { top: "70%", left: "75%" },
-  { top: "45%", left: "45%" },
+  { top: "15%", left: "20%" },
+  { top: "28%", left: "70%" },
+  { top: "55%", left: "25%" },
+  { top: "62%", left: "75%" },
+  { top: "40%", left: "45%" },
 ];
