@@ -22,6 +22,13 @@ export default defineNuxtConfig({
           content: "Portfolio, Software Engineer, Iwuchukwu Divine",
         },
       ],
+      link: [
+        {
+          rel: "icon",
+          type: "image/png",
+          href: "/space.png",
+        },
+      ],
     },
   },
 
