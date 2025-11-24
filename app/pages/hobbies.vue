@@ -189,6 +189,7 @@ onMounted(() => {
   position: relative;
   overflow-x: hidden;
   margin-top: 60px;
+  background: var(--color-background-color);
 }
 
 /* Header Section */
@@ -196,6 +197,7 @@ onMounted(() => {
   text-align: center;
   padding: 3rem 2rem;
   margin-bottom: 2rem;
+  background: var(--color-background-color);
 }
 
 .hobbies-title {

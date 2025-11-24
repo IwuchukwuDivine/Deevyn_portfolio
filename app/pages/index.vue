@@ -398,6 +398,7 @@ const handleSubmit = () => {
 .home-container {
   width: 100%;
   position: relative;
+  background: var(--color-background-color);
 }
 
 /* Hero Section */
@@ -513,6 +514,7 @@ section {
   padding: 4rem 2rem;
   position: relative;
   z-index: 2;
+  background: var(--color-background-color);
 }
 
 .section-title {
