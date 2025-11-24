@@ -58,8 +58,6 @@ let lastTapTs = 0;
 let animationId: number | null = null;
 
 // Color interpolation for smooth theme transitions
-let currentBgColor = { r: 0, g: 0, b: 0 };
-let targetBgColor = { r: 0, g: 0, b: 0 };
 let currentTextColor = { r: 255, g: 255, b: 255 };
 let targetTextColor = { r: 255, g: 255, b: 255 };
 
@@ -237,33 +235,23 @@ function hexToRGBA(hex: string, a: number) {
 function render() {
   if (!ctx || !canvas.value) return;
 
-  // Update target colors from CSS variables
-  const bgColorStr = getComputedStyle(canvas.value)
-    .getPropertyValue("--color-background-color")
-    .trim();
+  // Update target color from CSS variables
   const textColorStr =
     getComputedStyle(canvas.value)
       .getPropertyValue("--color-text-color")
       .trim() || "rgba(255,255,255,1)";
 
-  if (bgColorStr) {
-    targetBgColor = parseColor(bgColorStr);
-  }
   targetTextColor = parseColor(textColorStr);
 
-  // Interpolate colors for smooth transition
-  lerpColor(currentBgColor, targetBgColor, 0.08);
+  // Interpolate text color for smooth transition
   lerpColor(currentTextColor, targetTextColor, 0.08);
 
+  // Clear canvas - let the container background show through
   ctx.clearRect(0, 0, width, height);
 
   // stars background
   ctx.save();
   ctx.globalAlpha = 1.0;
-  ctx.fillStyle = `rgb(${Math.round(currentBgColor.r)},${Math.round(
-    currentBgColor.g
-  )},${Math.round(currentBgColor.b)})`;
-  ctx.fillRect(0, 0, width, height);
   ctx.globalCompositeOperation = "lighter";
 
   // Use interpolated text color for stars
@@ -481,19 +469,12 @@ onMounted(() => {
   ctx = canvas.value.getContext("2d", { alpha: true });
   if (!ctx) return;
 
-  // Initialize colors from CSS variables
-  const bgColorStr = getComputedStyle(canvas.value)
-    .getPropertyValue("--color-background-color")
-    .trim();
+  // Initialize text color from CSS variables
   const textColorStr =
     getComputedStyle(canvas.value)
       .getPropertyValue("--color-text-color")
       .trim() || "rgba(255,255,255,1)";
 
-  if (bgColorStr) {
-    currentBgColor = parseColor(bgColorStr);
-    targetBgColor = parseColor(bgColorStr);
-  }
   currentTextColor = parseColor(textColorStr);
   targetTextColor = parseColor(textColorStr);
 
@@ -621,5 +602,6 @@ canvas {
   width: 100%;
   height: 100%;
   transition: opacity 0.3s ease, filter 0.3s ease;
+  background: transparent;
 }
 </style>

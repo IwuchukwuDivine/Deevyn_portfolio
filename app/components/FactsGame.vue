@@ -6,12 +6,15 @@
   >
     <div class="stars"></div>
     <fire-flies :spawn-rate="40" />
-    <h1 class="game-title font-micro5-regular">
-      Think you can get me to spill some secrets?
-    </h1>
+    <div class="game-title">
+      <h1 class="font-micro5-regular">
+        Think you can get me to spill some secrets?
+      </h1>
 
-    <div class="instructions">
-      Let's see how good you are... grab those glowing asteroids and smash away!
+      <div class="instructions">
+        Let's see how good you are... grab those glowing asteroids and smash
+        away!
+      </div>
     </div>
 
     <!-- Planets -->
@@ -432,10 +435,26 @@ const showSmashText = (x: number, y: number) => {
 };
 
 const revealFact = (fact: string, x: number, y: number) => {
+  // Constrain position to keep modal within viewport bounds
+  const isMobile = window.innerWidth < 768;
+  const modalWidth = isMobile ? window.innerWidth * 0.85 : 400;
+  const modalHeight = isMobile ? 180 : 200;
+  const padding = isMobile ? 10 : 40;
+
+  // Constrain X position
+  const minX = modalWidth / 2 + padding;
+  const maxX = window.innerWidth - modalWidth / 2 - padding;
+  const finalX = Math.max(minX, Math.min(maxX, x));
+
+  // Constrain Y position
+  const minY = modalHeight / 2 + padding + (isMobile ? 60 : 0); // Account for mobile header
+  const maxY = window.innerHeight - modalHeight / 2 - padding;
+  const finalY = Math.max(minY, Math.min(maxY, y));
+
   const reveal: FactReveal = {
     id: nextRevealId++,
-    x,
-    y,
+    x: finalX,
+    y: finalY,
     fact,
   };
 
@@ -842,15 +861,13 @@ onUnmounted(() => {
 .game-title {
   position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   color: var(--color-text-color);
   font-size: 38px;
   text-align: center;
   z-index: 10;
   animation: titleGlow 3s ease-in-out infinite;
   padding: 0 1rem;
-  max-width: 90%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -872,22 +889,15 @@ onUnmounted(() => {
 }
 
 .instructions {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   color: var(--color-text-color);
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   opacity: 0.8;
-  z-index: 10;
-  padding: 0 1rem;
-  max-width: 90%;
 }
 
 @media (max-width: 768px) {
   .instructions {
-    font-size: 12px;
+    font-size: 16px;
     bottom: 10px;
   }
 }
