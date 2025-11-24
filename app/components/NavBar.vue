@@ -44,9 +44,12 @@
     <!-- Mobile Navigation -->
     <div class="nav-mobile md:hidden">
       <div class="mobile-header">
-        <h2 class="text-2xl font-micro5-regular font-bold text-primary-color">
+        <NuxtLink
+          to="/"
+          class="text-2xl font-micro5-regular font-bold text-primary-color"
+        >
           Divine
-        </h2>
+        </NuxtLink>
         <div class="flex items-center gap-4">
           <!-- Theme selector for mobile -->
           <div class="theme-selector-mobile">

@@ -225,6 +225,7 @@ const projects: Project[] = [
   position: relative;
   overflow-x: hidden;
   margin-top: 60px;
+  background: var(--color-background-color);
 }
 
 /* Header Section */
