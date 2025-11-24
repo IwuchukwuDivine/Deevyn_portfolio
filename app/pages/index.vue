@@ -223,15 +223,18 @@
         </div>
         <p class="deploy-intro">
           Every developer remembers their first website. Mine was a love letter
-          to the three things that defined me: <strong>web development</strong>
-          (which I was just learning), <strong>crocheting</strong> (1000+
-          projects strong), and <strong>good food</strong>. No frameworks, no
-          fancy animations—just pure HTML, CSS, JavaScript, and determination.
+          to the three things that defined me:
+          <strong>web development</strong> (which I was just learning),
+          <strong>crocheting</strong> (1000+ projects strong), and
+          <strong>good food</strong>. No frameworks, no fancy animations—just
+          pure HTML, CSS, JavaScript, and determination.
         </p>
         <div class="deploy-highlight">
           <div class="highlight-icon">💫</div>
           <div class="highlight-content">
-            <h3 class="highlight-title">From "Hello World" to Hello Universe</h3>
+            <h3 class="highlight-title">
+              From "Hello World" to Hello Universe
+            </h3>
             <p class="highlight-text">
               That first deployment taught me the fundamentals. Now I build with
               Vue, Nuxt, TypeScript, and all the fancy tools—but I'll never
@@ -801,7 +804,7 @@ section {
   color: var(--color-primary-color);
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 1.3rem;
   font-family: var(--font-micro5-regular);
   transition: all 0.3s ease;
 }
@@ -830,7 +833,7 @@ section {
 .cta-text strong {
   color: var(--color-primary-color);
   font-family: var(--font-micro5-regular);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   display: block;
   margin-bottom: 0.5rem;
 }

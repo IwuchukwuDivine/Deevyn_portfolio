@@ -46,9 +46,9 @@
       <div class="mobile-header">
         <NuxtLink
           to="/"
-          class="text-2xl font-micro5-regular font-bold text-primary-color"
+          class="text-2xl font-chewy-regular font-bold text-primary-color"
         >
-          Divine
+          Dee~vyn
         </NuxtLink>
         <div class="flex items-center gap-4">
           <!-- Theme selector for mobile -->
