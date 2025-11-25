@@ -1,4 +1,5 @@
 <template>
+  <back-to-top v-if="showFooter" />
   <nav-bar
     @toggle-side-drawer="isSideDrawerOpen = !isSideDrawerOpen"
     @toggle-mobile-menu="isMobileMenuOpen = !isMobileMenuOpen"

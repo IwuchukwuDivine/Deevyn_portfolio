@@ -160,7 +160,7 @@
           <strong>web development</strong> (which I was just learning),
           <strong>crocheting</strong> (1000+ projects strong), and
           <strong>good food</strong>. No frameworks, no fancy animations—just
-          pure HTML, CSS, JavaScript, and determination.
+          pure HTML, CSS, and determination.
         </p>
         <div class="deploy-highlight">
           <div class="highlight-icon">💫</div>
