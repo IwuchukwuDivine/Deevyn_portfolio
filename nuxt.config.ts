@@ -42,5 +42,9 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css", "~/assets/css/fonts.css"],
-  modules: ["nuxt-lucide-icons"],
+  modules: [
+    "nuxt-lucide-icons",
+    "@pinia/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
+  ],
 });

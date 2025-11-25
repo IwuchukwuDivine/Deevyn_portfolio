@@ -241,12 +241,6 @@ const projects: Project[] = [
   margin-bottom: 1.5rem;
 }
 
-.title-bracket {
-  color: var(--color-primary-color);
-  font-size: 1.2em;
-  text-shadow: 0 0 10px var(--color-primary-color);
-}
-
 .projects-subtitle {
   font-size: 1.1rem;
   line-height: 1.7;

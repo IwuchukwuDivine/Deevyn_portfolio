@@ -131,11 +131,11 @@
 </template>
 
 <script setup lang="ts">
+const { currentTheme } = useTheme();
+
 const props = defineProps<{
   isMobileMenuOpen?: boolean;
 }>();
-
-const currentTheme = ref(themes[0]);
 const emit = defineEmits<{
   (e: "toggle-side-drawer"): void;
   (e: "toggle-mobile-menu"): void;
@@ -143,7 +143,7 @@ const emit = defineEmits<{
 const showThemeSelector = ref(false);
 const handleThemeSelector = (theme: (typeof themes)[number]) => {
   switchTheme(theme.name);
-  currentTheme.value = theme;
+  currentTheme.value = { ...theme };
   showThemeSelector.value = false;
 };
 </script>
@@ -259,7 +259,8 @@ const handleThemeSelector = (theme: (typeof themes)[number]) => {
   border: 2px solid var(--color-primary-color);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  column-gap: 1.6rem;
+  row-gap: 0.6rem;
   border-radius: 0.5rem;
   padding: 0.75rem;
   z-index: 10;

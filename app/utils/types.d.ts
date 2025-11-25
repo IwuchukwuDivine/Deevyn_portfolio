@@ -38,3 +38,22 @@ export interface Ripple {
   x: number;
   y: number;
 }
+export interface CursorTrailParticle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  life: number;
+  maxLife: number;
+  size: number;
+  color: string;
+  shape: CursorTrailParticleShape;
+}
+
+export type CursorTrailParticleShape =
+  | "circle"
+  | "star"
+  | "triangle"
+  | "square"
+  | "heart"
+  | "sparkle";

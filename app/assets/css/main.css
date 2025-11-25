@@ -86,3 +86,26 @@ select {
   --color-background-color: #303841;
   --color-text-color: #eeeeee;
 }
+.title-bracket {
+  color: var(--color-primary-color);
+  font-size: 1.2em;
+  text-shadow: 0 0 10px var(--color-primary-color);
+}
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-text-color);
+  font-family: var(--font-micro5-regular);
+}
+section {
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+  background: var(--color-background-color);
+}
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1rem;
+  }
+}

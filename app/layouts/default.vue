@@ -11,14 +11,24 @@
     <side-drawer :is-open="isSideDrawerOpen" class="hidden md:block" />
     <div class="w-full mx-auto bg-background-color text-text-color">
       <NuxtPage />
+      <Footer v-if="showFooter" />
+      <fire-flies :spawn-rate="40" />
     </div>
-    <fire-flies :spawn-rate="40" />
+    <cursor-trail />
   </div>
 </template>
 
 <script setup lang="ts">
 const isSideDrawerOpen = ref(false);
 const isMobileMenuOpen = ref(false);
+const { currentTheme } = useTheme();
+
+const route = useRoute();
+const showFooter = computed(() => route.path !== "/about");
+
+onMounted(() => {
+  switchTheme(currentTheme.value?.name || "theme-default");
+});
 </script>
 
 <style scoped></style>

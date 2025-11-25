@@ -29,7 +29,7 @@ export const themes = [
   },
   {
     name: "theme-navy-pink",
-    color: "#364f6b",
+    color: "#fc5185",
   },
   {
     name: "theme-warm-purple",
