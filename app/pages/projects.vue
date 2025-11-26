@@ -137,7 +137,7 @@ const projects: Project[] = [
     icon: "🛍️",
     description:
       "An online shopping platform for premium home appliances, perfumes, electronics, and lifestyle essentials with a smooth, secure checkout experience.",
-    tech: ["React", "Node.js", "Stripe", "MongoDB"],
+    tech: ["Nuxt", "Tailwind CSS", "Supabase", "Paystack"],
     link: "https://essenceials.com/",
     personal: false,
   },
@@ -147,7 +147,7 @@ const projects: Project[] = [
     icon: "🔗",
     description:
       "A Pan-African platform focused on unity, collaboration, and empowerment. Connecting communities across the continent.",
-    tech: ["Vue.js", "Nuxt", "Supabase", "Tailwind CSS"],
+    tech: ["Vue.js", "Nuxt", "Vuetify"],
     link: "https://umoja-africa.com/",
     personal: false,
   },
@@ -157,7 +157,7 @@ const projects: Project[] = [
     icon: "🎥",
     description:
       "A movie discovery app powered by the TMDB API with a clean, responsive UI. Search, explore, and discover your next favorite film.",
-    tech: ["React", "TMDB API", "CSS3", "Axios"],
+    tech: ["HTML5", "CSS3", "JavaScript", "TMDB API", "Axios"],
     link: "https://flickfusion.vercel.app/",
     github: "https://github.com/IwuchukwuDivine/flick-fusion",
     personal: true,
@@ -168,7 +168,7 @@ const projects: Project[] = [
     icon: "🍽️",
     description:
       "A modern restaurant landing page that highlights the menu, specials, reservations, and gallery. Designed for an exceptional dining experience.",
-    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    tech: ["HTML5", "CSS3", "JavaScript"],
     link: "https://buds-sensation.vercel.app/",
     github: "https://github.com/IwuchukwuDivine/restaurant-website",
     personal: true,
@@ -200,7 +200,7 @@ const projects: Project[] = [
     icon: "🪙",
     description:
       "A dark-themed Solana blockchain landing page with smooth animations and modern Web3 aesthetics.",
-    tech: ["React", "Framer Motion", "Web3", "CSS3"],
+    tech: ["React", "Web3", "CSS3"],
     link: "https://soluxsolana.netlify.app/",
     personal: false,
   },
@@ -210,7 +210,7 @@ const projects: Project[] = [
     icon: "💰",
     description:
       "A tool for managing and tracking daily expenses with intuitive charts and budget management features.",
-    tech: ["Vue.js", "Chart.js", "LocalStorage"],
+    tech: ["Vue.js", "Chart.js"],
     link: "https://expense-tracker-xi-gray.vercel.app/",
     github: "https://github.com/IwuchukwuDivine/Expense-Tracker",
     personal: true,
