@@ -40,6 +40,11 @@
               <span>About</span>
               <lucide-chevron-right :size="16" class="nav-arrow" />
             </nuxt-link>
+            <nuxt-link class="nav-item" to="/opensource">
+              <lucide-git-branch :size="20" />
+              <span>Open Source</span>
+              <lucide-chevron-right :size="16" class="nav-arrow" />
+            </nuxt-link>
             <nuxt-link class="nav-item" to="/hobbies">
               <lucide-heart :size="20" />
               <span>Hobbies</span>

@@ -137,3 +137,46 @@ export const planetPositions = [
   { top: "62%", left: "75%" },
   { top: "40%", left: "45%" },
 ];
+export const openSourceProjects = [
+  {
+    name: "Polls",
+    badge: "Featured Open Source Project",
+    githubUrl: "https://github.com/IwuchukwuDivine/polls",
+    liveUrl: "https://polls-liart-six.vercel.app/",
+    description:
+      "A modern, progressive web app for creating engaging polls with multiple formats - multiple-choice, visual comparisons, and live results. Built with Nuxt 4 and Vue 3.",
+    tags: [
+      "Nuxt 4",
+      "Vue 3",
+      "TypeScript",
+      "PWA",
+      "Tailwind CSS",
+      "Pinia",
+      "Good First Issue",
+      "Open Source",
+    ],
+    ctaIcon: "🚀",
+    ctaTitle: "Open for Contributions!",
+    ctaDescription:
+      "Perfect for developers interested in building modern polling applications. Contribute to features like real-time voting, visual comparisons, and analytics!",
+  },
+  {
+    name: "HTML to Vue Converter",
+    badge: "Featured Open Source Project",
+    githubUrl: "https://github.com/IwuchukwuDivine/html_vue_converter",
+    liveUrl: "https://html-vue-converter.vercel.app/",
+    description:
+      "A powerful tool that instantly converts vanilla HTML to Vue 3 Single File Components. Supports both Composition API and Options API with smart parsing.",
+    tags: [
+      "Beginner Friendly",
+      "Good First Issue",
+      "Vue 3",
+      "TypeScript",
+      "Open Source",
+    ],
+    ctaIcon: "🚀",
+    ctaTitle: "Open for Contributions!",
+    ctaDescription:
+      "Perfect for beginners and anyone looking to dive into open source. You don't need to be a Vue expert—just bring your enthusiasm to learn!",
+  },
+];

@@ -5,10 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import type {
-  CursorTrailParticle,
-  CursorTrailParticleShape,
-} from "../utils/types";
+import type { CursorTrailParticle } from "../utils/types";
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 const containerRef = ref<HTMLElement | null>(null);

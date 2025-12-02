@@ -97,7 +97,7 @@
     </section>
 
     <!-- Open Source & Collaboration -->
-    <open-source />
+    <open-source :show-see-all="true" :limit="2" />
     <!-- Skills Galaxy -->
     <section class="skills-section">
       <h2 class="section-title">

@@ -17,6 +17,10 @@
         <lucide-user />
         <span>About</span>
       </nuxt-link>
+      <nuxt-link to="/opensource" class="nav-link">
+        <lucide-git-branch />
+        <span>Open Source</span>
+      </nuxt-link>
       <nuxt-link to="/hobbies" class="nav-link">
         <lucide-heart />
         <span>Hobbies</span>
@@ -114,6 +118,14 @@
           >
             <lucide-heart class="w-6 h-6" />
             <span>Hobbies</span>
+          </nuxt-link>
+          <nuxt-link
+            to="/opensource"
+            class="mobile-menu-link"
+            @click="emit('toggle-mobile-menu')"
+          >
+            <lucide-git-branch class="w-6 h-6" />
+            <span>Open Source</span>
           </nuxt-link>
         </div>
       </div>
