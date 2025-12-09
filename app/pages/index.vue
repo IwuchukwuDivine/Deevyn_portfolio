@@ -43,55 +43,14 @@
         <span class="title-bracket">]</span>
       </h2>
       <div class="expertise-grid">
-        <div class="expertise-card">
-          <div class="card-icon">🌐</div>
-          <h3 class="card-title">Web Development</h3>
-          <p class="card-desc">
-            Mastery in Vue.js, Nuxt, and modern web frameworks. Building
-            responsive, performant web applications with exceptional UX and
-            Progressive Web Apps (PWA) for offline-first experiences.
-          </p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-icon">📱</div>
-          <h3 class="card-title">Mobile App Development</h3>
-          <p class="card-desc">
-            Cross-platform mobile applications using React Native and Capacitor.
-            Native performance with shared codebases for iOS and Android.
-          </p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-icon">🛒</div>
-          <h3 class="card-title">E-Commerce Solutions</h3>
-          <p class="card-desc">
-            End-to-end e-commerce platforms with seamless payment integration,
-            inventory management, and scalable architecture.
-          </p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-icon">🔗</div>
-          <h3 class="card-title">Web3 & Blockchain</h3>
-          <p class="card-desc">
-            P2P exchange platforms, smart contracts, and decentralized
-            applications bridging traditional web with blockchain technology.
-          </p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-icon">🚁</div>
-          <h3 class="card-title">Drone Tech & Automation</h3>
-          <p class="card-desc">
-            DFR flight planning tools, automation systems, docking stations, and
-            3D map rendering with Cesium at iDrone Innovations.
-          </p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-icon">⚙️</div>
-          <h3 class="card-title">Backend Development & Automation</h3>
-          <p class="card-desc">
-            Node-RED for visual automation flows, Supabase with RLS policies,
-            Python serverless backends with AWS Lambda, DynamoDB, CloudFront
-            CDN, and AWS IoT MQTT for real-time device communication.
-          </p>
+        <div
+          v-for="expertise in expertises"
+          :key="expertise.title"
+          class="expertise-card"
+        >
+          <div class="card-icon">{{ expertise.icon }}</div>
+          <h3 class="card-title">{{ expertise.title }}</h3>
+          <p class="card-desc">{{ expertise.description }}</p>
         </div>
       </div>
     </section>
@@ -214,6 +173,44 @@ onMounted(() => {
     }
   }, 80);
 });
+const expertises = [
+  {
+    icon: "🌐",
+    title: "Web Development",
+    description:
+      "Mastery in Vue.js, Nuxt, and modern web frameworks. Building responsive, performant web applications with exceptional UX and Progressive Web Apps (PWA) for offline-first experiences.",
+  },
+  {
+    icon: "📱",
+    title: "Mobile App Development",
+    description:
+      "Cross-platform mobile applications using React Native and Capacitor. Native performance with shared codebases for iOS and Android.",
+  },
+  {
+    icon: "🛒",
+    title: "E-Commerce Solutions",
+    description:
+      "End-to-end e-commerce platforms with seamless payment integration, inventory management, and scalable architecture.",
+  },
+  {
+    icon: "🔗",
+    title: "Web3 & Blockchain",
+    description:
+      "P2P exchange platforms, smart contracts, and decentralized applications bridging traditional web with blockchain technology.",
+  },
+  {
+    icon: "🚁",
+    title: "Drone Tech & Automation",
+    description:
+      "DFR flight planning tools, automation systems, docking stations, and 3D map rendering with Cesium at iDrone Innovations.",
+  },
+  {
+    icon: "⚙️",
+    title: "Backend Development & Automation",
+    description:
+      "Node-RED for visual automation flows, Supabase with RLS policies, Python serverless backends with AWS Lambda, DynamoDB, CloudFront CDN, and AWS IoT MQTT for real-time device communication.",
+  },
+];
 </script>
 
 <style scoped>
@@ -241,7 +238,7 @@ onMounted(() => {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(2.8rem, 8vw, 5rem);
   color: var(--color-primary-color);
   margin: 0;
   position: relative;
@@ -385,7 +382,7 @@ onMounted(() => {
 
 .card-title {
   font-family: var(--font-micro5-regular);
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--color-primary-color);
   margin-bottom: 1rem;
 }

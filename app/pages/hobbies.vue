@@ -274,14 +274,14 @@ onMounted(() => {
 }
 
 .hobby-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--color-primary-color);
   margin-bottom: 1rem;
   text-shadow: 0 0 10px var(--color-primary-color);
 }
 
 .hobby-description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: var(--color-text-color);
   opacity: 0.9;

@@ -226,6 +226,7 @@ const projects: Project[] = [
   overflow-x: hidden;
   margin-top: 60px;
   background: var(--color-background-color);
+  z-index: 1;
 }
 
 /* Header Section */
@@ -489,12 +490,8 @@ const projects: Project[] = [
     padding: 1.5rem;
   }
 
-  .project-name {
-    font-size: 1.5rem;
-  }
-
   .project-description {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .project-icon {

@@ -168,7 +168,7 @@ const displayedProjects = computed(() => {
 
 .opensource-intro {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   color: var(--color-text-color);
   opacity: 0.9;
@@ -207,7 +207,7 @@ const displayedProjects = computed(() => {
 
 .collab-title {
   font-family: var(--font-micro5-regular);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--color-primary-color);
   margin-bottom: 1rem;
 }
@@ -475,12 +475,8 @@ const displayedProjects = computed(() => {
     padding: 1rem;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
   .opensource-intro {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .collaboration-cards {
