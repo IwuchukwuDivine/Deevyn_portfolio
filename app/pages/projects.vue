@@ -100,25 +100,6 @@ interface Project {
   personal?: boolean;
 }
 
-onMounted(() => {
-  const cards = document.querySelectorAll(".project-card");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("card-visible");
-        }
-      });
-    },
-    {
-      threshold: 0.2,
-    }
-  );
-
-  cards.forEach((card) => observer.observe(card));
-});
-
 const projects: Project[] = [
   {
     id: "html-vue-converter",
@@ -257,7 +238,7 @@ const projects: Project[] = [
   margin: 0 auto;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2rem;
 }
 
@@ -532,48 +513,5 @@ const projects: Project[] = [
     width: 100%;
     justify-content: center;
   }
-}
-/* --- Scroll Animation Base --- */
-.project-card {
-  opacity: 0;
-  transform: translateY(40px) scale(0.95);
-  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform, opacity;
-}
-
-/* --- When in viewport --- */
-.card-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* --- Extra neon glow — space vibes --- */
-.project-card.card-visible .card-content {
-  box-shadow: 0 0 20px rgba(var(--color-primary-color-rgb), 0.2),
-    0 0 40px rgba(var(--color-primary-color-rgb), 0.1);
-  transition: box-shadow 0.8s ease;
-}
-
-/* Neon border pulse on entrance */
-.project-card.card-visible .card-content::before {
-  animation: borderSweep 1.6s ease forwards;
-}
-
-@keyframes borderSweep {
-  0% {
-    left: -120%;
-  }
-  60% {
-    left: 120%;
-  }
-  100% {
-    left: 200%;
-  }
-}
-
-/* Parallax scroll effect: subtle tilt */
-.project-card.card-visible:hover {
-  transform: translateY(-10px) scale(1.02) rotate3d(1, 1, 0, 6deg);
-  transition: transform 0.45s ease;
 }
 </style>
