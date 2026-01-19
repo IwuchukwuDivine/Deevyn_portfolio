@@ -102,6 +102,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 'food-delivery-app',
+    name: 'Food Print',
+    icon: '🍔',
+    description: 'An Online food delivery store for african delicacies, breakfast boxes , lunch packs, food bowls and english breakfast',
+    tech: ['Nuxt', 'Vue.js', 'pwa', 'Tailwind CSS', 'Supabase'],
+    link: 'https://www.foodprint.com.ng',
+    personal: false,
+  },
+  {
     id: "html-vue-converter",
     name: "HTML to Vue Converter",
     icon: "🔄",
