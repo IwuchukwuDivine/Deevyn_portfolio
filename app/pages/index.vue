@@ -178,7 +178,7 @@ const expertises = [
     icon: "🌐",
     title: "Web Development",
     description:
-      "Mastery in Vue.js, Nuxt, and modern web frameworks. Building responsive, performant web applications with exceptional UX and Progressive Web Apps (PWA) for offline-first experiences.",
+      "Expert in modern web frameworks including React.js, Next.js, Vue.js, and Nuxt (primary stack). Building responsive, performant web applications with exceptional UX and Progressive Web Apps (PWA) for offline-first experiences.",
   },
   {
     icon: "📱",
