@@ -161,25 +161,6 @@ export const openSourceProjects = [
       "Perfect for developers interested in building modern polling applications. Contribute to features like real-time voting, visual comparisons, and analytics!",
   },
   {
-    name: "HTML to Vue Converter",
-    badge: "Featured Open Source Project",
-    githubUrl: "https://github.com/IwuchukwuDivine/html_vue_converter",
-    liveUrl: "https://html-vue-converter.vercel.app/",
-    description:
-      "A powerful tool that instantly converts vanilla HTML to Vue 3 Single File Components. Supports both Composition API and Options API with smart parsing.",
-    tags: [
-      "Beginner Friendly",
-      "Good First Issue",
-      "Vue 3",
-      "TypeScript",
-      "Open Source",
-    ],
-    ctaIcon: "🚀",
-    ctaTitle: "Open for Contributions!",
-    ctaDescription:
-      "Perfect for beginners and anyone looking to dive into open source. You don't need to be a Vue expert—just bring your enthusiasm to learn!",
-  },
-  {
     name: "Flagit",
     badge: "Featured Open Source Project",
     githubUrl: "https://github.com/IwuchukwuDivine/flagit",
@@ -200,5 +181,24 @@ export const openSourceProjects = [
     ctaTitle: "Open for Contributions!",
     ctaDescription:
       "Help build a platform for civic engagement! Contribute to features like AI-assisted writing, community events, real-time messaging, and more.",
+  },
+  {
+    name: "HTML to Vue Converter",
+    badge: "Featured Open Source Project",
+    githubUrl: "https://github.com/IwuchukwuDivine/html_vue_converter",
+    liveUrl: "https://html-vue-converter.vercel.app/",
+    description:
+      "A powerful tool that instantly converts vanilla HTML to Vue 3 Single File Components. Supports both Composition API and Options API with smart parsing.",
+    tags: [
+      "Beginner Friendly",
+      "Good First Issue",
+      "Vue 3",
+      "TypeScript",
+      "Open Source",
+    ],
+    ctaIcon: "🚀",
+    ctaTitle: "Open for Contributions!",
+    ctaDescription:
+      "Perfect for beginners and anyone looking to dive into open source. You don't need to be a Vue expert—just bring your enthusiasm to learn!",
   },
 ];

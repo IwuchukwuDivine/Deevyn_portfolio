@@ -102,12 +102,13 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 'food-delivery-app',
-    name: 'Food Print',
-    icon: '🍔',
-    description: 'An Online food delivery store for african delicacies, breakfast boxes , lunch packs, food bowls and english breakfast',
-    tech: ['Nuxt', 'Vue.js', 'pwa', 'Tailwind CSS', 'Supabase'],
-    link: 'https://www.foodprint.com.ng',
+    id: "food-delivery-app",
+    name: "Food Print",
+    icon: "🍔",
+    description:
+      "An Online food delivery store for african delicacies, breakfast boxes , lunch packs, food bowls and english breakfast",
+    tech: ["Nuxt", "Vue.js", "pwa", "Tailwind CSS", "Supabase"],
+    link: "https://www.foodprint.com.ng",
     personal: false,
   },
   {
@@ -140,6 +141,17 @@ const projects: Project[] = [
     tech: ["Vue.js", "Nuxt", "Vuetify"],
     link: "https://umoja-africa.com/",
     personal: false,
+  },
+  {
+    id: "flagit",
+    name: "Flagit",
+    icon: "🚩",
+    description:
+      "A civic complaints platform where citizens can report local issues, upvote problems, and track resolutions in their community. Open source and open for contributions.",
+    tech: ["Nuxt 4", "TypeScript", "Prisma", "SQLite", "Tailwind CSS"],
+    link: "https://flagit.mooo.com",
+    github: "https://github.com/IwuchukwuDivine/flagit",
+    personal: true,
   },
   {
     id: "flickfusion",
@@ -203,17 +215,6 @@ const projects: Project[] = [
     tech: ["Vue.js", "Chart.js"],
     link: "https://expense-tracker-xi-gray.vercel.app/",
     github: "https://github.com/IwuchukwuDivine/Expense-Tracker",
-    personal: true,
-  },
-  {
-    id: "flagit",
-    name: "Flagit",
-    icon: "🚩",
-    description:
-      "A civic complaints platform where citizens can report local issues, upvote problems, and track resolutions in their community. Open source and open for contributions.",
-    tech: ["Nuxt 4", "TypeScript", "Prisma", "SQLite", "Tailwind CSS"],
-    link: "https://flagit.mooo.com",
-    github: "https://github.com/IwuchukwuDivine/flagit",
     personal: true,
   },
 ];
