@@ -179,4 +179,26 @@ export const openSourceProjects = [
     ctaDescription:
       "Perfect for beginners and anyone looking to dive into open source. You don't need to be a Vue expert—just bring your enthusiasm to learn!",
   },
+  {
+    name: "Flagit",
+    badge: "Featured Open Source Project",
+    githubUrl: "https://github.com/IwuchukwuDivine/flagit",
+    liveUrl: "https://flagit.mooo.com",
+    description:
+      "A civic complaints platform where citizens can report local issues, upvote problems, and track resolutions in their community. Built with Nuxt 4, Prisma, and SQLite.",
+    tags: [
+      "Nuxt 4",
+      "Vue 3",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "SQLite",
+      "Civic Tech",
+      "Open Source",
+    ],
+    ctaIcon: "🚀",
+    ctaTitle: "Open for Contributions!",
+    ctaDescription:
+      "Help build a platform for civic engagement! Contribute to features like AI-assisted writing, community events, real-time messaging, and more.",
+  },
 ];

@@ -205,6 +205,17 @@ const projects: Project[] = [
     github: "https://github.com/IwuchukwuDivine/Expense-Tracker",
     personal: true,
   },
+  {
+    id: "flagit",
+    name: "Flagit",
+    icon: "🚩",
+    description:
+      "A civic complaints platform where citizens can report local issues, upvote problems, and track resolutions in their community. Open source and open for contributions.",
+    tech: ["Nuxt 4", "TypeScript", "Prisma", "SQLite", "Tailwind CSS"],
+    link: "https://flagit.mooo.com",
+    github: "https://github.com/IwuchukwuDivine/flagit",
+    personal: true,
+  },
 ];
 </script>
 
