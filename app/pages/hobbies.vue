@@ -137,6 +137,13 @@
 </template>
 
 <script setup lang="ts">
+usePageSeo({
+  title: "Crochet & Hobbies",
+  description:
+    "Beyond the code — crocheting (1000+ projects strong), reading, movies, and handmade crafts by Iwuchukwu Divine.",
+  path: "/hobbies",
+});
+
 const lightboxOpen = ref(false);
 const currentImageIndex = ref(0);
 const galleryRef = ref<HTMLElement | null>(null);

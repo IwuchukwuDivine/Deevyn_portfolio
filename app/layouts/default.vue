@@ -22,14 +22,9 @@
 <script setup lang="ts">
 const isSideDrawerOpen = ref(false);
 const isMobileMenuOpen = ref(false);
-const { currentTheme } = useTheme();
 
 const route = useRoute();
 const showFooter = computed(() => route.path !== "/about");
-
-onMounted(() => {
-  switchTheme(currentTheme.value?.name || "theme-default");
-});
 </script>
 
 <style scoped></style>

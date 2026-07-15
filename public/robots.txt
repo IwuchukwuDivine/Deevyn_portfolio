@@ -1,2 +1,4 @@
 User-Agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://deevyn-portfolio.vercel.app/sitemap.xml

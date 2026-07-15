@@ -1,3 +1,56 @@
+export type ProjectCategory =
+  | "client"
+  | "ai"
+  | "open-source"
+  | "personal"
+  | "experiment";
+
+export interface ProjectCaseStudy {
+  role: string;
+  year?: string;
+  problem: string;
+  solution: string;
+  highlights: string[];
+}
+
+export interface Project {
+  slug: string;
+  name: string;
+  icon: string;
+  description: string;
+  tech: string[];
+  link: string;
+  github?: string;
+  screenshot?: string;
+  screenshotAlt?: string;
+  category: ProjectCategory;
+  featured: boolean;
+  caseStudy?: ProjectCaseStudy;
+}
+
+export interface ExperienceEntry {
+  role: string;
+  company: string;
+  period: string;
+  type: "contract" | "internship" | "full-time";
+  location: string;
+  summary: string;
+  highlights: string[];
+  tech: string[];
+}
+
+export interface OpenSourceProject {
+  name: string;
+  badge: string;
+  githubUrl: string;
+  liveUrl?: string;
+  description: string;
+  tags: string[];
+  ctaIcon: string;
+  ctaTitle: string;
+  ctaDescription: string;
+}
+
 export interface Planet {
   top: string;
   left: string;

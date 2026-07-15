@@ -13,13 +13,13 @@
         <lucide-briefcase />
         <span>Projects</span>
       </nuxt-link>
-      <nuxt-link to="/about" class="nav-link">
-        <lucide-user />
-        <span>About</span>
-      </nuxt-link>
       <nuxt-link to="/opensource" class="nav-link">
         <lucide-git-branch />
         <span>Open Source</span>
+      </nuxt-link>
+      <nuxt-link to="/about" class="nav-link">
+        <lucide-user />
+        <span>About</span>
       </nuxt-link>
       <nuxt-link to="/hobbies" class="nav-link">
         <lucide-heart />
@@ -96,14 +96,6 @@
             <span>Home</span>
           </nuxt-link>
           <nuxt-link
-            to="/about"
-            class="mobile-menu-link"
-            @click="emit('toggle-mobile-menu')"
-          >
-            <lucide-user class="w-6 h-6" />
-            <span>About</span>
-          </nuxt-link>
-          <nuxt-link
             to="/projects"
             class="mobile-menu-link"
             @click="emit('toggle-mobile-menu')"
@@ -112,20 +104,28 @@
             <span>Projects</span>
           </nuxt-link>
           <nuxt-link
-            to="/hobbies"
-            class="mobile-menu-link"
-            @click="emit('toggle-mobile-menu')"
-          >
-            <lucide-heart class="w-6 h-6" />
-            <span>Hobbies</span>
-          </nuxt-link>
-          <nuxt-link
             to="/opensource"
             class="mobile-menu-link"
             @click="emit('toggle-mobile-menu')"
           >
             <lucide-git-branch class="w-6 h-6" />
             <span>Open Source</span>
+          </nuxt-link>
+          <nuxt-link
+            to="/about"
+            class="mobile-menu-link"
+            @click="emit('toggle-mobile-menu')"
+          >
+            <lucide-user class="w-6 h-6" />
+            <span>About</span>
+          </nuxt-link>
+          <nuxt-link
+            to="/hobbies"
+            class="mobile-menu-link"
+            @click="emit('toggle-mobile-menu')"
+          >
+            <lucide-heart class="w-6 h-6" />
+            <span>Hobbies</span>
           </nuxt-link>
         </div>
       </div>
@@ -154,7 +154,6 @@ const emit = defineEmits<{
 }>();
 const showThemeSelector = ref(false);
 const handleThemeSelector = (theme: (typeof themes)[number]) => {
-  switchTheme(theme.name);
   currentTheme.value = { ...theme };
   showThemeSelector.value = false;
 };

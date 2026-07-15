@@ -11,7 +11,7 @@ const useThemeStore = defineStore(
   },
   {
     persist: {
-      storage: localStorage,
+      storage: piniaPluginPersistedstate.cookies(),
     },
   }
 );

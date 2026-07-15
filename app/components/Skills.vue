@@ -12,7 +12,7 @@ let width = 0;
 let height = 0;
 let cx = 0;
 let cy = 0;
-let DPR = Math.max(1, window.devicePixelRatio || 1);
+let DPR = 1; // real value derived from window.devicePixelRatio in resize() on mount
 
 let stars: Array<{ x: number; y: number; r: number; a: number }> = [];
 let center: {

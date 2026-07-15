@@ -17,8 +17,9 @@
       </div>
       <p class="hero-description">
         Transforming ideas into reality through code. With 5 years of crafting
-        digital experiences, I specialize in building scalable web applications
-        and cutting-edge drone automation systems.
+        digital experiences, I build scalable web and mobile applications,
+        cutting-edge drone automation systems, and AI agents that actually do
+        the work.
       </p>
       <div class="hero-stats">
         <div class="stat-item">
@@ -55,8 +56,11 @@
       </div>
     </section>
 
+    <!-- Work Experience -->
+    <Experience />
+
     <!-- Open Source & Collaboration -->
-    <open-source :show-see-all="true" :limit="2" />
+    <open-source :show-see-all="true" :limit="3" />
     <!-- Skills Galaxy -->
     <section class="skills-section">
       <h2 class="section-title">
@@ -159,19 +163,92 @@
 </template>
 
 <script setup lang="ts">
+usePageSeo({
+  title: "Software Engineer & AI Automation Builder",
+  description:
+    "Software Engineer with 5+ years building web and mobile apps, autonomous drone operation platforms, and AI agents — with Vue.js, Nuxt, TypeScript, and Python.",
+  path: "/",
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Iwuchukwu Divine Ifunanya",
+          jobTitle: "Software Engineer",
+          url: SITE_URL,
+          sameAs: [
+            "https://github.com/IwuchukwuDivine",
+            "https://www.linkedin.com/in/deevyn/",
+            "https://twitter.com/_DeeVyn",
+          ],
+          knowsAbout: [
+            "Vue.js",
+            "Nuxt",
+            "TypeScript",
+            "JavaScript",
+            "Python",
+            "AI Automation",
+            "AI Agents",
+            "Drone Automation",
+            "React Native",
+            "AWS",
+          ],
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: "University of Port Harcourt",
+          },
+          worksFor: {
+            "@type": "Organization",
+            name: "IDI — IDRONEINNOVATIONS",
+            url: "https://idroneinnovations.com",
+          },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Iwuchukwu Divine — Software Engineer",
+          url: SITE_URL,
+        },
+      ]),
+    },
+  ],
+});
+
 const typedText = ref("");
-const fullText = "Software Engineer";
-let typeIndex = 0;
+const roles = ["Software Engineer", "AI Automation Builder"];
 
 onMounted(() => {
-  const typeInterval = setInterval(() => {
-    if (typeIndex < fullText.length) {
-      typedText.value += fullText[typeIndex];
-      typeIndex++;
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  const tick = () => {
+    const current = roles[roleIndex] ?? "";
+    if (!deleting) {
+      charIndex++;
+      typedText.value = current.slice(0, charIndex);
+      if (charIndex === current.length) {
+        deleting = true;
+        setTimeout(tick, 2200);
+        return;
+      }
+      setTimeout(tick, 80);
     } else {
-      clearInterval(typeInterval);
+      charIndex--;
+      typedText.value = current.slice(0, charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+      setTimeout(tick, 40);
     }
-  }, 80);
+  };
+  tick();
 });
 const expertises = [
   {
@@ -197,6 +274,12 @@ const expertises = [
     title: "Web3 & Blockchain",
     description:
       "P2P exchange platforms, smart contracts, and decentralized applications bridging traditional web with blockchain technology.",
+  },
+  {
+    icon: "🤖",
+    title: "AI Automation & Agents",
+    description:
+      "Building AI teammates and agentic workflows: Griot (an AI Slack agent with institutional memory and vector search), Claude Code tooling and skills orchestration (ClaudeVerse, skill-registry), and AI-assisted products from contract generation to food-ordering agents.",
   },
   {
     icon: "🚁",
