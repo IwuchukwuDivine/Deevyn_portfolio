@@ -16,7 +16,12 @@
     <section class="hobbies-section">
       <!-- Reading -->
       <div class="hobby-card">
-        <div class="hobby-icon">📚</div>
+        <img
+          src="/characters/hobby-reading.webp"
+          alt="3D character of Divine reading a book in a comfy armchair"
+          loading="lazy"
+          class="hobby-character"
+        />
         <h3 class="hobby-title font-micro5-regular">Reading</h3>
         <p class="hobby-description">
           There was a time when I could devour 5 books a day—no exaggeration. I
@@ -32,7 +37,12 @@
 
       <!-- Movies & Series -->
       <div class="hobby-card">
-        <div class="hobby-icon">🎬</div>
+        <img
+          src="/characters/hobby-movies.webp"
+          alt="3D character of Divine laughing with a bowl of popcorn and 3D glasses"
+          loading="lazy"
+          class="hobby-character"
+        />
         <h3 class="hobby-title font-micro5-regular">Movies & Series</h3>
         <p class="hobby-description">
           These days, shows are mostly background noise while I work or unwind.
@@ -49,7 +59,12 @@
 
       <!-- Handmade Crafts -->
       <div class="hobby-card highlight">
-        <div class="hobby-icon">🧶</div>
+        <img
+          src="/characters/hobby-crochet.webp"
+          alt="3D character of Divine crocheting with orange yarn surrounded by cute crochet plushies"
+          loading="lazy"
+          class="hobby-character"
+        />
         <h3 class="hobby-title font-micro5-regular">
           Handmade Crafts & Crochet
         </h3>
@@ -274,10 +289,18 @@ onMounted(() => {
   background: rgba(var(--color-primary-color-rgb), 0.05);
 }
 
-.hobby-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 10px var(--color-primary-color));
+.hobby-character {
+  display: block;
+  height: 190px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-character {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .hobby-title {

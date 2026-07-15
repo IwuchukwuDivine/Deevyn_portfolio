@@ -4,37 +4,44 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="glitch-wrapper">
-        <h1 class="hero-title font-micro5-regular">
-          <span class="glitch" data-text="Iwuchukwu Divine"
-            >Iwuchukwu Divine</span
-          >
-        </h1>
-      </div>
-      <div class="hero-subtitle font-chewy-regular">
-        <span class="typed-text">{{ typedText }}</span>
-        <span class="cursor">|</span>
-      </div>
-      <p class="hero-description">
-        Transforming ideas into reality through code. With 5 years of crafting
-        digital experiences, I build scalable web and mobile applications,
-        cutting-edge drone automation systems, and AI agents that actually do
-        the work.
-      </p>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">5+</div>
-          <div class="stat-label">Years Experience</div>
+      <div class="hero-content">
+        <div class="glitch-wrapper">
+          <h1 class="hero-title font-micro5-regular">
+            <span class="glitch" data-text="Iwuchukwu Divine"
+              >Iwuchukwu Divine</span
+            >
+          </h1>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Projects Delivered</div>
+        <div class="hero-subtitle font-chewy-regular">
+          <span class="typed-text">{{ typedText }}</span>
+          <span class="cursor">|</span>
         </div>
-        <div class="stat-item">
-          <div class="stat-number">∞</div>
-          <div class="stat-label">Lines of Code</div>
+        <p class="hero-description">
+          Transforming ideas into reality through code. With 5 years of
+          crafting digital experiences, I build scalable web and mobile
+          applications, cutting-edge drone automation systems, and AI agents
+          that actually do the work.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Lines of Code</div>
+          </div>
         </div>
       </div>
+      <img
+        src="/characters/hero-wave.webp"
+        alt="3D character of Divine waving hello with a laptop under her arm"
+        class="hero-character"
+      />
     </section>
 
     <!-- Expertise Section -->
@@ -49,7 +56,12 @@
           :key="expertise.title"
           class="expertise-card"
         >
-          <div class="card-icon">{{ expertise.icon }}</div>
+          <img
+            :src="expertise.image"
+            :alt="expertise.alt"
+            loading="lazy"
+            class="card-character"
+          />
           <h3 class="card-title">{{ expertise.title }}</h3>
           <p class="card-desc">{{ expertise.description }}</p>
         </div>
@@ -252,43 +264,50 @@ onMounted(() => {
 });
 const expertises = [
   {
-    icon: "🌐",
+    image: "/characters/web-development.webp",
+    alt: "3D character of Divine coding happily on a laptop",
     title: "Web Development",
     description:
       "Expert in modern web frameworks including React.js, Next.js, Vue.js, and Nuxt (primary stack). Building responsive, performant web applications with exceptional UX and Progressive Web Apps (PWA) for offline-first experiences.",
   },
   {
-    icon: "📱",
+    image: "/characters/mobile-development.webp",
+    alt: "3D character of Divine holding up a smartphone with an app and giving a thumbs up",
     title: "Mobile App Development",
     description:
       "Cross-platform mobile applications using React Native and Capacitor. Native performance with shared codebases for iOS and Android.",
   },
   {
-    icon: "🛒",
+    image: "/characters/ecommerce.webp",
+    alt: "3D character of Divine carrying colorful shopping bags with a floating cart and credit card",
     title: "E-Commerce Solutions",
     description:
       "End-to-end e-commerce platforms with seamless payment integration, inventory management, and scalable architecture.",
   },
   {
-    icon: "🔗",
+    image: "/characters/web3.webp",
+    alt: "3D character of Divine juggling golden coins and floating blockchain cubes",
     title: "Web3 & Blockchain",
     description:
       "P2P exchange platforms, smart contracts, and decentralized applications bridging traditional web with blockchain technology.",
   },
   {
-    icon: "🤖",
+    image: "/characters/ai-automation.webp",
+    alt: "3D character of Divine fist-bumping a friendly robot assistant",
     title: "AI Automation & Agents",
     description:
       "Building AI teammates and agentic workflows: Griot (an AI Slack agent with institutional memory and vector search), Claude Code tooling and skills orchestration (ClaudeVerse, skill-registry), and AI-assisted products from contract generation to food-ordering agents.",
   },
   {
-    icon: "🚁",
+    image: "/characters/drone-tech.webp",
+    alt: "3D character of Divine piloting a drone with a remote controller",
     title: "Drone Tech & Automation",
     description:
       "DFR flight planning tools, automation systems, docking stations, and 3D map rendering with Cesium at iDrone Innovations.",
   },
   {
-    icon: "⚙️",
+    image: "/characters/backend-automation.webp",
+    alt: "3D character of Divine leaning on glowing server towers holding a golden gear",
     title: "Backend Development & Automation",
     description:
       "Node-RED for visual automation flows, Supabase with RLS policies, Python serverless backends with AWS Lambda, DynamoDB, CloudFront CDN, and AWS IoT MQTT for real-time device communication.",
@@ -310,10 +329,45 @@ const expertises = [
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
   z-index: 2;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-character {
+  height: 240px;
+  width: auto;
+  filter: drop-shadow(0 10px 25px rgba(var(--color-primary-color-rgb), 0.35));
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .hero-character {
+    height: 340px;
+  }
 }
 
 .glitch-wrapper {
@@ -458,9 +512,18 @@ const expertises = [
   box-shadow: 0 5px 30px rgba(var(--color-primary-color-rgb), 0.3);
 }
 
-.card-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.card-character {
+  display: block;
+  height: 180px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.expertise-card:hover .card-character {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .card-title {
